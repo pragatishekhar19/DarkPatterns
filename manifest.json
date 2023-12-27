@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "terms and condition checker",
+  "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_icon": {
+      "16": "flag.png",
+      "48": "flag.png",
+      "128": "flag.png"
+    },
+    "default_title": "terms and condition checker",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "flag.png",
+    "48": "flag.png",
+    "128": "flag.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
